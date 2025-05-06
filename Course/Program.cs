@@ -9,34 +9,33 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            #region Exe1
-            Console.Write("Digite um numero entre 1 e 1000: ");
-            int num = int.Parse(Console.ReadLine());
+            double xA, xB, xC, yA, yB, yC;
 
-            for (int i = 1; i <= num; i++)
-            {
-                if (i % 2 == 1)
-                    Console.WriteLine(i);
-            }
-            #endregion
+            Console.WriteLine("Entre com as medidas do triangulo X");
+            xA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            xB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            xC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            #region Exe2
-            Console.Write("Digite um numero inteiro: ");
-            int num2 = int.Parse(Console.ReadLine());
-            int IN = 0;
-            int OUT = 0;
-            for (int i = 0; i < num2; i++)
-            {
-                int x = int.Parse(Console.ReadLine());
 
-                if (x >= 10 && x <= 20)
-                    IN++;
-                else
-                    OUT++;
-            }
-            Console.WriteLine(IN + " in");
-            Console.WriteLine(OUT + " out");
-            #endregion
+            Console.WriteLine("Entre com as medidas do triangulo Y");
+            yA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            yB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            yC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double p = (xA + xB + xC) / 2.0;
+            double areaX = Math.Sqrt(p * (p - xA) * (p - xB) * (p - xC));
+
+            p = (yA + yB + yC) / 2.0;
+            double areaY = Math.Sqrt(p * (p - yA) * (p - yB) * (p - yC));
+
+            Console.WriteLine("Area de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("Area de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
+            
+
+            if (areaX > areaY)
+                Console.WriteLine("O maior é o X");
+            else
+                Console.WriteLine("O maior é o Y");
         }
     }
 }
