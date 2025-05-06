@@ -12,3 +12,4 @@ C:\Jeferson\Udemy\Course\Course\obj\Debug\net8.0\refint\Course.dll
 C:\Jeferson\Udemy\Course\Course\obj\Debug\net8.0\Course.pdb
 C:\Jeferson\Udemy\Course\Course\obj\Debug\net8.0\Course.genruntimeconfig.cache
 C:\Jeferson\Udemy\Course\Course\obj\Debug\net8.0\ref\Course.dll
+C:\Jeferson\Udemy\Course\Course\obj\Debug\net8.0\Course.sourcelink.json
