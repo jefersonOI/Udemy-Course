@@ -23,10 +23,8 @@ namespace Course
             #region Exe2
             Console.Write("Digite um numero inteiro: ");
             int num2 = int.Parse(Console.ReadLine());
-
             int IN = 0;
             int OUT = 0;
-
             for (int i = 0; i < num2; i++)
             {
                 int x = int.Parse(Console.ReadLine());
@@ -39,10 +37,6 @@ namespace Course
             Console.WriteLine(IN + " in");
             Console.WriteLine(OUT + " out");
             #endregion
-
-
-
-
         }
     }
 }
