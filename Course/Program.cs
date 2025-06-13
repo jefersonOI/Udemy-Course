@@ -9,23 +9,22 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Pessoa x, y;
-            x = new Pessoa();
-            y = new Pessoa();
+            Funcionario x, y;
+            x = new Funcionario();
+            y = new Funcionario();
 
-            Console.WriteLine("Dados da primeira Pessoa");
+            Console.WriteLine("Dados da primeira Funcionario");
             x.Nome = Console.ReadLine();
-            x.Idade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             
-            Console.WriteLine("Dados da segunda Pessoa");
+            Console.WriteLine("Dados da segunda Funcionario");
             y.Nome = Console.ReadLine();
-            y.Idade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            if (x.Idade > y.Idade)
-                Console.WriteLine("Pessoa mais velha: " + x.Nome);
-            else
-                Console.WriteLine("Pessoa mais velha: " + y.Nome);
-                
+
+            double media = (x.Salario + y.Salario) / 2;
+
+            Console.WriteLine("A média dos 2 salário é de: " + media.ToString("C2"));
         }
     }
 }
