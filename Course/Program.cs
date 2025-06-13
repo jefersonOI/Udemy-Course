@@ -9,28 +9,35 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Triangulo x, y;
-            x = new Triangulo();
-            y = new Triangulo();
+            Produto oProduto = new Produto();
 
-            Console.WriteLine("Entre com as medidas do triangulo X");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre com os dados do Produto");
+            Console.Write("Nome: ");
+            oProduto.Nome = Console.ReadLine();
+            Console.Write("Preço: ");
+            oProduto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade: ");
+            oProduto.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Console.WriteLine("Dados do produto: " + oProduto);
+            Console.WriteLine();
 
-            Console.WriteLine("Entre com as medidas do triangulo Y");
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            #region Adicionando
+            Console.Write("Digite o número de produtos que será adiconado ao estoque: ");
+            int qtd = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            oProduto.AdicionarProdutos(qtd);
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto atualizado: " + oProduto);
+            #endregion
 
-            double areaX = x.CalcularArea();
-            double areaY = y.CalcularArea();
-
-            Console.WriteLine("Area de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
-            Console.WriteLine("Area de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
-
-
+            #region Removendo
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos que será removido ao estoque: ");
+            qtd = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            oProduto.RemoverProdutos(qtd);
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto atualizado: " + oProduto);
+            #endregion
         }
     }
 }
