@@ -26,7 +26,5 @@ namespace Course
         {
             return Math.Sqrt((Largura * Largura) + (Altura * Altura));
         }
-
-
     }
 }
