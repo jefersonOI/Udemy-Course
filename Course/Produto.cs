@@ -9,41 +9,55 @@ namespace Course
 {
     class Produto
     {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
 
-        public Produto(string nome, double preco, int quantidade) : this(nome, preco)
+        public string GetNome()
         {
-            Quantidade = quantidade;
+            return _nome;
         }
 
-        public Produto(string nome, double preco) : this()
+        public void SetNome(string nome)
         {
-            Nome = nome;
-            Preco = preco;
+            if (nome != null && nome.Length > 1)
+                _nome = nome;
         }
 
+        public double GetPreco()
+        {
+            return _preco;
+        }
+
+        public int GetQuantidade()
+        {
+            return _quantidade;
+        }
+        public Produto(string nome, double preco, int quantidade)
+        {
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
+        }
         public Produto()
         {
-            Quantidade = 10;
         }
 
         public double ValorTotalEmEstoque()
         {
-            return Quantidade * Preco;
+            return _quantidade * _preco;
         }
         public void AdicionarProdutos(int quantidade)
         {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
         public void RemoverProdutos(int quantidade)
         {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
         public override string ToString()
         {
-            return Nome + ", " + Preco.ToString("C2") + ". " + Quantidade + " unidades, Total: " + ValorTotalEmEstoque().ToString("C2");
+            return _nome + ", " + _preco.ToString("C2") + ". " + _quantidade + " unidades, Total: " + ValorTotalEmEstoque().ToString("C2");
         }
     }
 }
