@@ -9,30 +9,27 @@ namespace Course
 {
     class Produto
     {
+        #region Propriedades e Atributos
         private string _nome;
         private double _preco;
         private int _quantidade;
 
-        public string GetNome()
+        public string Nome
         {
-            return _nome;
+            get { return _nome; }
+            set { if (value != null && value.Length > 1) _nome = value; }
         }
 
-        public void SetNome(string nome)
+        public double Preco
         {
-            if (nome != null && nome.Length > 1)
-                _nome = nome;
+            get { return _preco; }
         }
+        public int Quantidade
+        {
+            get { return _quantidade; }
+        }
+        #endregion
 
-        public double GetPreco()
-        {
-            return _preco;
-        }
-
-        public int GetQuantidade()
-        {
-            return _quantidade;
-        }
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
