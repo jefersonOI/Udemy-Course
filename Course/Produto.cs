@@ -13,23 +13,20 @@ namespace Course
         private string _nome;
         public double Preco { get; private set; }
         public int Quantidade { get; private set; }
-
-        public string Nome
-        {
-            get { return _nome; }
-            set { if (value != null && value.Length > 1) _nome = value; }
-        }
-       
         #endregion
 
+        public Produto() { }
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
-        public Produto()
+
+        public string Nome
         {
+            get { return _nome; }
+            set { if (value != null && value.Length > 1) _nome = value; }
         }
 
         public double ValorTotalEmEstoque()
