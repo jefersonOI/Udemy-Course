@@ -14,11 +14,11 @@ namespace ourse
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
+            //Console.Write("Quantidade no estoque: ");
+            //int quantidade = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Produto oProduto = new Produto(nome, preco, quantidade);
+            Produto oProduto = new Produto(nome, preco);
 
 
             Console.WriteLine("Dados do produto: " + oProduto);
