@@ -8,7 +8,7 @@ namespace ourse
     {
         static void Main(string[] args)
         {
-           
+
             Console.WriteLine("Entre os dados do produto:");
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
@@ -19,7 +19,12 @@ namespace ourse
             Console.WriteLine();
 
             Produto oProduto = new Produto(nome, preco);
-
+            Produto oProduto1 = new Produto
+            {
+                Nome = "TV",
+                Preco = 500.00,
+                Quantidade = 20
+            };
 
             Console.WriteLine("Dados do produto: " + oProduto);
             Console.WriteLine();
