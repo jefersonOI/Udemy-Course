@@ -9,17 +9,15 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Calculadora oCalculadora = new Calculadora();
-
             Console.WriteLine("Entre com o valor do raio");            
             double raio = double.Parse(Console.ReadLine());
 
-            double circunferencia = oCalculadora.Circunferencia(raio);
-            double volume = oCalculadora.Volume(raio);
+            double circunferencia = Calculadora.Circunferencia(raio);
+            double volume = Calculadora.Volume(raio);
 
             Console.WriteLine("Circunferência: " + circunferencia.ToString("F2"));
             Console.WriteLine("Volume: " + volume.ToString("F2"));
-            Console.WriteLine("Valor de PI: " + oCalculadora.PI.ToString("F2"));
+            Console.WriteLine("Valor de PI: " + Calculadora.PI.ToString("F2"));
         }
     }
 }
