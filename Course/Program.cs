@@ -8,21 +8,24 @@ namespace ourse
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Entre com a quantidade de pessoas: ");
+            
             int n = int.Parse(Console.ReadLine());
 
-            double[] vect = new double[n];
+            Produto[] vect = new Produto[n];
 
             for (int i = 0; i < n; i++)
             {
-                vect[i] = double.Parse(Console.ReadLine());
+                string nome = Console.ReadLine();
+                
+                double preco = double.Parse(Console.ReadLine());
+
+                vect[i] = new Produto {Nome = nome, Preco = preco };
             }
 
             double sum = 0.0;
             for (int i = 0; i < n; i++)
             {
-                sum += vect[i];
+                sum += vect[i].Preco;
             }
 
 
