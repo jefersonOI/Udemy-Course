@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 namespace Course
 {
     class Calculadora
-    {
-        public static double PI = 3.14;
-
-        public static double Circunferencia(double raio)
+    {       
+        public static int Soma(params int[] numbers)
         {
-            return 2.0 * PI * raio;
-        }
-
-        public static double Volume(double raio)
-        {
-            return 4.0 / 3.0 * PI * raio * raio * raio;
+            int soma = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                soma += numbers[i];
+            }   
+            return soma;
         }
     }
 }

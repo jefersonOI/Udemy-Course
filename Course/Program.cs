@@ -8,34 +8,13 @@ namespace ourse
     {
         static void Main(string[] args)
         {
-            Aluno[] oAluno = new Aluno[10];
+            int s1 = Calculadora.Soma(10, 20);
+            int s2 = Calculadora.Soma(10, 20,50,60);
+            int s3 = Calculadora.Soma(10, 20,80,90,65,7652);
 
-            Console.WriteLine("Quantos quartos vai ser alugado");
-            int qtdQuartos = int.Parse(Console.ReadLine());
-           
-            for (int i = 0; i < qtdQuartos; i++)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}: ");
-                Console.Write("Nome: ");
-                string nome = Console.ReadLine();
-
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-
-                Console.Write("Quarto: ");
-                int numeroQuarto = int.Parse(Console.ReadLine());
-                oAluno[numeroQuarto] = new Aluno(nome, email);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados: ");
-            for (int i = 0;i < 10;i++)
-            {
-                if (oAluno[i] != null)
-                    Console.WriteLine(i + ": " + oAluno[i]);
-
-            }           
+            Console.WriteLine(s1);
+            Console.WriteLine(s2);
+            Console.WriteLine(s3);
         }
     }
 }
