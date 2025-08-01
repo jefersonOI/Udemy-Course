@@ -8,29 +8,34 @@ namespace ourse
     {
         static void Main(string[] args)
         {
-            
-            int n = int.Parse(Console.ReadLine());
+            Aluno[] oAluno = new Aluno[10];
 
-            Produto[] vect = new Produto[n];
-
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("Quantos quartos vai ser alugado");
+            int qtdQuartos = int.Parse(Console.ReadLine());
+           
+            for (int i = 0; i < qtdQuartos; i++)
             {
+                Console.WriteLine();
+                Console.WriteLine($"Aluguel #{i}: ");
+                Console.Write("Nome: ");
                 string nome = Console.ReadLine();
-                
-                double preco = double.Parse(Console.ReadLine());
 
-                vect[i] = new Produto {Nome = nome, Preco = preco };
+                Console.Write("Email: ");
+                string email = Console.ReadLine();
+
+                Console.Write("Quarto: ");
+                int numeroQuarto = int.Parse(Console.ReadLine());
+                oAluno[numeroQuarto] = new Aluno(nome, email);
             }
 
-            double sum = 0.0;
-            for (int i = 0; i < n; i++)
+            Console.WriteLine();
+            Console.WriteLine("Quartos ocupados: ");
+            for (int i = 0;i < 10;i++)
             {
-                sum += vect[i].Preco;
-            }
+                if (oAluno[i] != null)
+                    Console.WriteLine(i + ": " + oAluno[i]);
 
-
-            double avg = sum / n;
-            Console.WriteLine("Media de altura " + avg.ToString("F2"));
+            }           
         }
     }
 }

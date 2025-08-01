@@ -8,30 +8,18 @@ namespace Course
 {
     class Aluno
     {
-        public string Nome;
-        public double Nota1;
-        public double Nota2;
-        public double Nota3;
-        public bool Aprovado;
+        public string Nome { get; set; }
+        public string Email { get; set; }
 
-        public double CalcularNotaFinal()
+        public Aluno(string nome, string email)
         {
-            return Nota1 + Nota2 + Nota3;
+            Nome = nome;
+            Email = email;
         }
 
-        public bool AprovadoOuReprovado()
+        public override string ToString()
         {
-            double notaFinal = CalcularNotaFinal();
-
-            if (CalcularNotaFinal() >= 60)
-                return true;
-            else
-                return false;
-        }
-
-        public double CalcularNotaFaltante()
-        {
-            return 60.0 - CalcularNotaFinal();
+            return Nome + ", " + Email;
         }
     }
 }
