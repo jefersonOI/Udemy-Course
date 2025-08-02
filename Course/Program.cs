@@ -8,10 +8,19 @@ namespace ourse
     {
         static void Main(string[] args)
         {
-            int a = 10;
-            int resultado;
-            Calculadora.Triplica(a, out resultado);
-            Console.WriteLine(resultado);
+            string[] valores = new string[] {"maria", "bob","joao" } ;
+
+            for (int i = 0 ; i < valores.Length; i++)
+            {
+                Console.WriteLine(valores[i]);
+            }
+
+            Console.WriteLine("----------------------------");
+
+            foreach(string obj in valores)
+            {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
