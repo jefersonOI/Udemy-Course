@@ -8,14 +8,9 @@ namespace Course
 {
     class Calculadora
     {       
-        public static int Soma(params int[] numbers)
+        public static void Triplica(int x, out int resultado)
         {
-            int soma = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                soma += numbers[i];
-            }   
-            return soma;
+            resultado = x * 3;
         }
     }
 }
