@@ -8,27 +8,18 @@ namespace Course
 {
     class Funcionario
     {
-        public string Nome;
-        public double SalarioBruto;
-        public double Imposto;
-
-
-
-        public double SalarioLiquido()
-        {            
-            return SalarioBruto - Imposto;
-        }
+        public int FuncionarioID { get; set; }
+        public string Nome { get; set; }
+        public double Salario { get; set; }
 
         public void AumentarSalario(double porcentagem)
         {
-            SalarioBruto += ( SalarioBruto * porcentagem / 100);
+            Salario += ( Salario * porcentagem / 100);
         }
 
         public override string ToString()
         {
-            return Nome + ", " + SalarioLiquido().ToString("C2");
+            return Nome + ", " + Salario.ToString("C2");
         }
-
-
     }
 }
