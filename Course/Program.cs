@@ -14,7 +14,7 @@ namespace Course
             int quantidade = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < quantidade; i++)
-            {   
+            {
                 Console.WriteLine($"Funcionário #{i + 1}:");
                 Console.Write("ID: ");
                 int id = int.Parse(Console.ReadLine());
@@ -23,14 +23,14 @@ namespace Course
                 Console.Write("Salário: ");
                 double salario = double.Parse(Console.ReadLine());
 
-                Funcionario oFuncionario = new Funcionario 
-               {
+                Funcionario oFuncionario = new Funcionario
+                {
                     FuncionarioID = id,
                     Nome = nome,
                     Salario = salario
                 };
 
-                lstFuncionario.Add(oFuncionario);                
+                lstFuncionario.Add(oFuncionario);
             }
 
             Console.WriteLine("Passa o numero do ID do funcionário que vai receber um aumento: ");
@@ -45,6 +45,8 @@ namespace Course
 
                 funcionario.AumentarSalario(porcentagem);
             }
+            else
+                Console.WriteLine("Esse ID não existe");
 
             foreach (Funcionario item in lstFuncionario)
             {

@@ -19,7 +19,7 @@ namespace Course
 
         public override string ToString()
         {
-            return Nome + ", " + Salario.ToString("C2");
+            return FuncionarioID.ToString() + ", " +  Nome + ", " + Salario.ToString("C2");
         }
     }
 }
